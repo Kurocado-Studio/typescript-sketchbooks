@@ -12,7 +12,6 @@
     "prettier:check": "prettier --check .",
     "prettier:fix": "prettier --check . --write",
     "preview-storybook": "serve storybook-static",
-    "setup": "pnpm install",
     "ui:local:lib": "pnpm add @kurocado-studio/ui-research-and-development@file:../../../design-system/packages/ui",
     "ui:canary:lib": "pnpm add @kurocado-studio/ui-research-and-development@canary",
     "ui:published:lib": "pnpm add @kurocado-studio/ui-research-and-development@latest",
