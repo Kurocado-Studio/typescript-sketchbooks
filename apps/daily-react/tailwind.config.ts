@@ -6,9 +6,9 @@ import {
 const { tailwindTheme } = composeDesignSystem(designTokens);
 
 export const content = [
-  './src/**/*.{ts,tsx}',
+  './src/**/*.{ts,tsx,css}',
   './stories/**/*.{ts,tsx}',
-  './.storybook',
+  './.storybook/**/*.{ts,tsx}',
   './node_modules/@kurocado-studio/ui-react-research-and-development',
 ];
 
