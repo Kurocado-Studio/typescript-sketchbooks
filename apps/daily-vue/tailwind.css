@@ -1,6 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@source "./node_modules/@kurocado-studio/ui-research-and-development";
+@import 'tailwindcss';
+@import './src/styles/typography.css';
+@config './tailwind.config.ts';
+
+@theme {
+  --font-display: 'Mona-Sans wide', sans-serif;
+  --font-sans: 'Mona-Sans', sans-serif;
+}
 
 @custom-variant dark (&:where(.dark, .dark *));

@@ -45,5 +45,5 @@ import {
   Input,
   Label,
   Typography,
-} from '@kurocado-studio/ui-research-and-development/vue';
+} from '@kurocado-studio/ui-vue-research-and-development';
 </script>

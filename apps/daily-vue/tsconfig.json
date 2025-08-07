@@ -22,6 +22,7 @@
     ".storybook/vitest.setup.ts",
     ".storybook/main.ts",
     "vitest.workspace.ts",
+    "tailwind.config.ts",
     "vite.config.ts",
     "src/**/*.vue"
   ],
