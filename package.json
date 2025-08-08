@@ -17,7 +17,7 @@
     "prettier:fix": "prettier --check . --write && turbo run prettier:fix",
     "preview-storybook": "turbo run preview-storybook",
     "semantic-release": "pnpm -r --workspace-concurrency=1 exec -- npx --no-install semantic-release -e semantic-release-monorepo",
-    "setup": "pnpm i && turbo run setup",
+    "setup": "pnpm i",
     "typecheck": "turbo run typecheck",
     "ui:local:lib": "turbo run ui:local:lib && pnpm dev",
     "ui:canary:lib": "turbo run ui:canary:lib && pnpm dev",
