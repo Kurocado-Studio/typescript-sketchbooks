@@ -5,7 +5,7 @@
   "type": "module",
   "packageManager": "pnpm@9.12.2",
   "scripts": {
-    "build": "turbo run build",
+    "build": "turbo run internal:build && turbo run build",
     "dev:storybook": "turbo run dev:storybook",
     "clean": "turbo run clean && rm -rf .turbo node_modules pnpm-lock.yaml",
     "commitlint": "pnpm exec commitlint --edit .git/COMMIT_EDITMSG",
