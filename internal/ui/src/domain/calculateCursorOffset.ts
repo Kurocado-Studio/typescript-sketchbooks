@@ -11,7 +11,7 @@ export function calculateCursorOffset(
   mouseX: number,
   mouseY: number,
   settings: CursorFollowSettings,
-) {
+): { x: number; y: number } {
   const elementRect = element.getBoundingClientRect();
   const elementCenterX = elementRect.left + elementRect.width / 2;
   const elementCenterY = elementRect.top + elementRect.height / 2;

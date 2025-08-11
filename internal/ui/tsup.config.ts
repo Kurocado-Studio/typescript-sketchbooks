@@ -1,6 +1,6 @@
 /* eslint import/no-default-export: 0 */
+import { execSync } from 'node:child_process';
 import { defineConfig } from 'tsup';
-import {execSync} from "node:child_process";
 
 export default defineConfig((options) => ({
   ...options,

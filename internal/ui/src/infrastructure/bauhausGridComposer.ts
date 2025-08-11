@@ -1,5 +1,28 @@
 import { BorderPrimaryColors, PrimaryColors } from '../domain/colors';
 
+export interface BauhausBasicColorsGrid {
+  blueSpanColumn: Record<string, unknown>;
+  mainGridProps: Record<string, unknown>;
+  redSpanColumn: Record<string, unknown>;
+  innerRedSpanColumnGridProps: Record<string, unknown>;
+  threeColumnsBasicColorBorders: Record<
+    PrimaryColors,
+    Record<string, unknown>[]
+  >;
+  blackSpanColumn: Record<string, unknown>;
+  innerBlueSpanColumnGridProps: Record<string, unknown>;
+  yellowSpanColumn: Record<string, unknown>;
+  innerYellowSpanColumnGridProps: Record<string, unknown>;
+}
+
+export interface BauhausVerticalLinesGrid {
+  blinkingYellowDots: Record<string, unknown>[];
+  mainGridProps: Record<string, unknown>;
+  verticalSpanColumn: Record<string, unknown>;
+  innerVerticalLines: Record<string, unknown>[];
+  innerYellowDotsContainer: Record<string, unknown>;
+}
+
 export const defaultGridProps = {
   columns: '12',
   gap: '0',
@@ -12,7 +35,10 @@ export const ariaHidden = {
   'aria-hidden': true,
 };
 
-export const composeCssClassName = (uiMode: UIMode, cssClass: string) => {
+export const composeCssClassName = (
+  uiMode: UIMode,
+  cssClass: string,
+): Record<string, string> => {
   return uiMode === 'react'
     ? {
         className: cssClass,
@@ -22,7 +48,9 @@ export const composeCssClassName = (uiMode: UIMode, cssClass: string) => {
       };
 };
 
-export const bauhausBasicColorsGridComposer = (uiMode: UIMode) => {
+export const bauhausBasicColorsGridComposer = (
+  uiMode: UIMode,
+): BauhausBasicColorsGrid => {
   const mainGridProps = {
     ...defaultGridProps,
     ...ariaHidden,
@@ -164,7 +192,7 @@ export const bauhausBasicColorsGridComposer = (uiMode: UIMode) => {
   };
 };
 
-export const bauhausVerticalLinesGridComposer = (uiMode: UIMode) => {
+export const bauhausVerticalLinesGridComposer = (uiMode: UIMode): BauhausVerticalLinesGrid => {
   const mainGridProps = {
     ...defaultGridProps,
     ...ariaHidden,
