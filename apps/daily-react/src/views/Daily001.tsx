@@ -4,7 +4,7 @@ import React from 'react';
 
 import { BauhausGrid } from 'src/components/BauhausGrid';
 import { LoginForm } from 'src/components/LoginForm';
-import { GlassFilters } from 'src/views/Glass';
+import { GlassFilters } from 'src/components/Glass';
 
 export function Daily001(): React.ReactNode {
   return (

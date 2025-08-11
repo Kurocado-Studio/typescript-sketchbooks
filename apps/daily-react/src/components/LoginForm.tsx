@@ -12,7 +12,7 @@ import { SurfaceColors } from '@ui';
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
 
-import { GlassContainer } from 'src/views/Glass';
+import { GlassContainer } from 'src/components/Glass';
 
 export const LoginForm = () => {
   return (
