@@ -192,7 +192,9 @@ export const bauhausBasicColorsGridComposer = (
   };
 };
 
-export const bauhausVerticalLinesGridComposer = (uiMode: UIMode): BauhausVerticalLinesGrid => {
+export const bauhausVerticalLinesGridComposer = (
+  uiMode: UIMode,
+): BauhausVerticalLinesGrid => {
   const mainGridProps = {
     ...defaultGridProps,
     ...ariaHidden,
