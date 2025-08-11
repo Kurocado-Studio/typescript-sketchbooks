@@ -13,7 +13,7 @@ import { useCursorFollow } from 'src/hooks/useCursorFollow';
 const bauhausBasicColorsGrid = bauhausBasicColorsGridComposer('react');
 const bauhausVerticalLinesGrid = bauhausVerticalLinesGridComposer('react');
 
-export function BauhausGrid() {
+export function BauhausGrid(): React.ReactNode {
   return (
     <div {...ariaHidden} className='relative h-screen w-screen'>
       <PrimaryColorGrid />
@@ -22,7 +22,7 @@ export function BauhausGrid() {
   );
 }
 
-export function PrimaryColorGrid() {
+export function PrimaryColorGrid(): React.ReactNode {
   const mainCursorFollower = useCursorFollow({
     damping: 100,
     stiffness: 600,
@@ -78,7 +78,7 @@ export function PrimaryColorGrid() {
   );
 }
 
-export function VerticalLinesGrid() {
+export function VerticalLinesGrid(): React.ReactNode {
   const secondaryCursorFollower = useCursorFollow({
     damping: 200,
     stiffness: 1000,

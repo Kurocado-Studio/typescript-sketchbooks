@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import React from 'react';
 
 import { BauhausGrid } from 'src/components/BauhausGrid';
+import { GlassFilters } from 'src/components/Glass';
 import { LoginForm } from 'src/components/LoginForm';
-import { GlassFilters } from 'src/views/Glass';
 
 export function Daily001(): React.ReactNode {
   return (

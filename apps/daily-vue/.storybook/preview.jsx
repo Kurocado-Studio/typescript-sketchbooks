@@ -1,7 +1,8 @@
 /* eslint import/no-default-export: 0 */
-import designTokens from '@kurocado-studio/ui-research-and-development/tokens.json';
-import '@kurocado-studio/ui-research-and-development/typography.css';
-import { ThemeProvider } from '@kurocado-studio/ui-vue-research-and-development';
+import {
+  ThemeProvider,
+  designTokens,
+} from '@kurocado-studio/ui-vue-research-and-development';
 import { themes } from '@storybook/theming';
 
 import '../tailwind.css';
