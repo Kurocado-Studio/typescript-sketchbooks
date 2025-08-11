@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": ["@internal/config/tsconfig.web.json"],
+  "compilerOptions": {
+    "types": ["@types/lodash-es", "@types/node"],
+    "skipLibCheck": true,
+    "allowJs": true,
+    "rootDir": ".",
+    "baseUrl": ".",
+    "jsx": "preserve"
+  },
+  "include": ["src/**/*", "tailwind.config.ts", "test", "tsup.config.ts"],
+  "exclude": ["dist", "build", "node_modules"]
+}

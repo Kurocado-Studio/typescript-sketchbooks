@@ -5,7 +5,8 @@
   "type": "module",
   "packageManager": "pnpm@9.12.2",
   "scripts": {
-    "build": "turbo run build",
+    "build": "turbo run internal:build && turbo run build",
+    "dev:storybook": "turbo run dev:storybook",
     "clean": "turbo run clean && rm -rf .turbo node_modules pnpm-lock.yaml",
     "commitlint": "pnpm exec commitlint --edit .git/COMMIT_EDITMSG",
     "dev": "turbo run dev",
@@ -17,7 +18,7 @@
     "prettier:fix": "prettier --check . --write && turbo run prettier:fix",
     "preview-storybook": "turbo run preview-storybook",
     "semantic-release": "pnpm -r --workspace-concurrency=1 exec -- npx --no-install semantic-release -e semantic-release-monorepo",
-    "setup": "pnpm i",
+    "setup": "pnpm i && turbo run setup",
     "typecheck": "turbo run typecheck",
     "ui:local:lib": "turbo run ui:local:lib && pnpm dev",
     "ui:canary:lib": "turbo run ui:canary:lib && pnpm dev",

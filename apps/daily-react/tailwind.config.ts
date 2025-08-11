@@ -10,6 +10,7 @@ export const content = [
   './stories/**/*.{ts,tsx}',
   './.storybook/**/*.{ts,tsx}',
   './node_modules/@kurocado-studio/ui-react-research-and-development',
+  '../../internal/ui',
 ];
 
 export const theme = tailwindTheme;

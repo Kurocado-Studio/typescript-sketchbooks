@@ -4,10 +4,15 @@
     "build": {
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": ["dist/**", "storybook-static/**"],
-      "dependsOn": ["^build"]
+      "dependsOn": ["^internal:build", "^build"]
+    },
+    "internal:build": {
+      "outputs": ["dist/**"],
+      "dependsOn": ["^internal:build"],
+      "cache": false
     },
     "setup": {
-      "dependsOn": ["^setup", "^build"],
+      "dependsOn": ["^internal:build", "^setup", "^build"],
       "cache": false
     },
     "prettier:fix": {
@@ -51,7 +56,12 @@
       "cache": false
     },
     "dev": {
-      "dependsOn": ["^setup"],
+      "dependsOn": ["^internal:build", "^setup"],
+      "cache": false,
+      "persistent": true
+    },
+    "dev:storybook": {
+      "dependsOn": ["^internal:build", "^setup", "^build"],
       "cache": false,
       "persistent": true
     },
