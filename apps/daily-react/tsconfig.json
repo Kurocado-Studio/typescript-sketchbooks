@@ -1,10 +1,11 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": ["@internal/config/tsconfig.web"],
+  "extends": ["@internal/config/tsconfig.web.json"],
   "compilerOptions": {
     "target": "ES2020",
     "typeRoots": ["./src/global.d.ts", "./node_modules/@types"],
-    "rootDir": ".",
+    "baseUrl": ".",
+    "rootDir": "../../",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "esModuleInterop": true,
@@ -18,7 +19,11 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "paths": {
+      "src/*": ["./src/*"],
+      "@ui": ["../../internal/ui/src/index.ts"]
+    }
   },
   "include": [
     "./.storybook/**/*",

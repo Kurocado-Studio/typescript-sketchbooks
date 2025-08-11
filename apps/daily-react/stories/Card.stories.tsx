@@ -1,7 +1,7 @@
 /* eslint import/no-default-export: 0 */
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Daily001 } from '../src/daily-ui-001/Daily001';
+import { Daily001 } from '../src/views/Daily001';
 
 const meta: Meta = {
   component: Daily001,
