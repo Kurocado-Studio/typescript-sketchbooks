@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 @import './src/styles/typography.css';
-@import './src/styles/glass.css';
+@import '../../internal/ui/src/domain/styles/glass.css';
 @config './tailwind.config.ts';
 
 @theme {
