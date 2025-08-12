@@ -16,20 +16,18 @@
       "import": "./dist/index.js"
     },
     "./tokens": "./dist/tokens/tokens.json",
-    "./tsconfig.web": "./dist/tsconfig.web.json",
+    "./tsconfig.web.json": "./dist/tsconfig.web.json",
     "./qa/web/setup": "./dist/setup.web.js"
   },
   "files": ["dist"],
   "scripts": {
-    "internal:build": "rm -rf dist && tsup --dts",
-    "build": "rm -rf dist && tsup --dts",
-    "dev": "rm -rf dist && tsup --watch --dts",
-    "clean": "rm -rf .turbo node_modules dist",
+    "internal:build": "pnpm install && rm -rf dist && tsup --dts",
+    "internal:dev": "rm -rf dist && tsup --watch --dts",
+    "internal:clean": "rm -rf .turbo node_modules dist",
     "lint": "eslint --max-warnings=0 . --no-warn-ignored",
     "lint:fix": "eslint --max-warnings=0 . --fix --no-warn-ignored",
     "prettier:check": "prettier --check .",
-    "prettier:fix": "prettier --check . --write",
-    "setup": "pnpm install"
+    "prettier:fix": "prettier --check . --write"
   },
   "devDependencies": {
     "@kurocado-studio/qa": "2.0.1",

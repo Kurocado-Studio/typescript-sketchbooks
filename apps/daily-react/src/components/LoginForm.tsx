@@ -7,14 +7,31 @@ import {
   Input,
   Label,
   Typography,
-} from '@kurocado-studio/ui-research-and-development/react';
+} from '@kurocado-studio/ui-react-research-and-development';
+import { SurfaceColors } from '@ui';
 import React from 'react';
+import { twMerge } from 'tailwind-merge';
 
-export function Daily001(): React.ReactNode {
+import { GlassContainer } from 'src/components/Glass';
+
+export const LoginForm = () => {
   return (
-    <main className='grid px-4 place-items-center h-screen bg-gray-50 dark:bg-gray-800'>
-      <Card className='w-full max-w-2xl'>
-        <FadeInStaggerGroup staggerSpeed={0.1} tag={Card.Body}>
+    <GlassContainer
+      className={twMerge(
+        'absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-full min-w-[300px] max-w-4xl',
+      )}
+    >
+      <FadeIn
+        tag={Card}
+        as='article'
+        className={`${SurfaceColors.MODAL} lg:p-12 w-full z-20`}
+      >
+        <FadeInStaggerGroup
+          staggerSpeed={0.1}
+          tag={Card.Body}
+          as='form'
+          className={SurfaceColors.MODAL}
+        >
           <FadeIn staggerOrder={0} fadeInDirection='DOWN'>
             <Avatar
               className='mb-8'
@@ -23,7 +40,7 @@ export function Daily001(): React.ReactNode {
             />
           </FadeIn>
           <FadeIn staggerOrder={1}>
-            <Typography weight='bold' size='2xl'>
+            <Typography className={'font-display'} weight='bold' size='2xl'>
               Welcome Back
             </Typography>
             <Typography weight='light' className='mb-8 mt-4' size='lg'>
@@ -48,7 +65,7 @@ export function Daily001(): React.ReactNode {
             <Button fullWidth>Login</Button>
           </FadeIn>
         </FadeInStaggerGroup>
-      </Card>
-    </main>
+      </FadeIn>
+    </GlassContainer>
   );
-}
+};

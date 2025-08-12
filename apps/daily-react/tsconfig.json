@@ -1,11 +1,11 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": ["@internal/config/tsconfig.web"],
+  "extends": ["@internal/config/tsconfig.web.json"],
   "compilerOptions": {
-    "types": ["@types/lodash-es", "@types/node"],
-    "typeRoots": ["./node_modules"],
     "target": "ES2020",
-    "rootDir": ".",
+    "typeRoots": ["./src/global.d.ts", "./node_modules/@types"],
+    "baseUrl": ".",
+    "rootDir": "../../",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "esModuleInterop": true,
@@ -19,8 +19,18 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "paths": {
+      "src/*": ["./src/*"],
+      "@ui": ["../../internal/ui/src/index.ts"]
+    }
   },
-  "include": ["./.storybook/**/*", "vite.config.ts", "src", "./stories/**/*"],
+  "include": [
+    "./.storybook/**/*",
+    "tailwind.config.ts",
+    "vite.config.ts",
+    "src",
+    "./stories/**/*"
+  ],
   "exclude": ["dist", "build", "node_modules"]
 }

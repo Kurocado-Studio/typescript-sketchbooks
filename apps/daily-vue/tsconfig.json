@@ -1,4 +1,6 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": ["@internal/config/tsconfig.web.json"],
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
@@ -11,19 +13,21 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve",
+    "baseUrl": ".",
+    "rootDir": "../../",
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@ui": ["../../internal/ui/src/index.ts"]
+    }
   },
   "include": [
-    "src",
-    "stories",
-    ".storybook/vitest.setup.ts",
-    ".storybook/main.ts",
-    "vitest.workspace.ts",
+    "./.storybook/**/*",
+    "tailwind.config.ts",
     "vite.config.ts",
-    "src/**/*.vue"
-  ],
-  "references": [{ "path": "./tsconfig.node.json" }]
+    "src",
+    "./stories/**/*"
+  ]
 }
