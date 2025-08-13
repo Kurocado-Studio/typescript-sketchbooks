@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 @import './src/styles/typography.css';
-@import '../../internal/ui/src/domain/styles/glass.css';
+@import '@kurocado-studio/ui-react-research-and-development/glass.css';
 @config './tailwind.config.ts';
 
 @theme {

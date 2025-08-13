@@ -14,12 +14,12 @@
     "prettier:fix": "prettier --check . --write",
     "preview-storybook": "serve storybook-static",
     "ui:local:lib": "pnpm add @kurocado-studio/ui-react-research-and-development@file:../../../design-system-research-and-development/packages/ui-react-research-and-development",
-    "ui:canary:lib": "pnpm add @kurocado-studio/ui-react-research-and-development@canary",
+    "ui:canary:lib": "pnpm i @kurocado-studio/ui-react-research-and-development@canary",
     "ui:published:lib": "pnpm add @kurocado-studio/ui-react-research-and-development@latest",
     "ui:local:sync": "pnpm clean && pnpm cd:ui-react && pnpm run build && pnpm run prepublishOnly && cd - && pnpm ui:local:lib"
   },
   "dependencies": {
-    "@kurocado-studio/ui-react-research-and-development": "1.0.0-develop.2",
+    "@kurocado-studio/ui-react-research-and-development": "1.0.0-develop.3",
     "framer-motion": "^12.23.12",
     "isbot": "^5",
     "lucide-react": "^0.292.0",
