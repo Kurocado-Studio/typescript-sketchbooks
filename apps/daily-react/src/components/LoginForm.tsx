@@ -4,6 +4,7 @@ import {
   Card,
   FadeIn,
   FadeInStaggerGroup,
+  GlassContainer,
   Input,
   Label,
   Typography,
@@ -12,9 +13,7 @@ import { SurfaceColors } from '@ui';
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
 
-import { GlassContainer } from 'src/components/Glass';
-
-export const LoginForm = () => {
+export const LoginForm = (): React.ReactNode => {
   return (
     <GlassContainer
       className={twMerge(

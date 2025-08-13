@@ -1,4 +1,5 @@
 /* eslint-disable */
+/* eslint-disable import/no-named-as-default */
 import tailwindcssVite from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';

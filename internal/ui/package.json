@@ -15,8 +15,7 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
-    "./tokens": "./dist/tokens/tokens.json",
-    "./glass.css": "./dist/domain/styles.css"
+    "./tokens": "./dist/tokens/tokens.json"
   },
   "files": ["dist"],
   "scripts": {
