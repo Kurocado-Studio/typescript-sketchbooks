@@ -1,0 +1,14 @@
+name: daily-ui
+id: ari:cloud:compass:bd0a3342-915f-4b2e-9c6f-c1004471898b:component/cd70f7d9-4b7b-4cf5-bcc9-02e9815145d9/f0693ac2-65c3-4bf1-a992-2e8bc6b93b69
+description: null
+configVersion: 1
+typeId: SERVICE
+fields:
+  tier: 4
+links: []
+relationships:
+  DEPENDS_ON: []
+labels:
+  - language:typescript
+  - source:github
+customFields: null
