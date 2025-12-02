@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="dcs"
+                 name="TypeScript Sketchbooks"
+                 start-page="starter-topic.md">
+
+    <toc-element topic="starter-topic.md"/>
+    <toc-element topic="Sketchbooks.md">
+        <toc-element topic="Daily-UI-React.md"/>
+        <toc-element topic="Motion.md"/>
+        <toc-element topic="Patterns.md"/>
+    </toc-element>
+</instance-profile>
