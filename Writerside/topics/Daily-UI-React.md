@@ -7,10 +7,10 @@ explore interaction patterns in an isolated environment.
 
 ## Links
 
-|                |     |
-| -------------- | --- |
-| Daily UI React | df  |
-| Daily UI Vue   | df  |
+|                |                                                                                                                                                                   |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Daily UI React | [Storybook](https://daily-ui-challenge-react.vercel.app)<br/> [GitHub repo](https://github.com/Kurocado-Studio/typescript-sketchbooks/tree/main/apps/daily-react) |
+| Daily UI Vue   | Coming soon                                                                                                                                                       |
 
 ## Scope
 

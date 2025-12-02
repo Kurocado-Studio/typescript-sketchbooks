@@ -31,6 +31,15 @@ jobs:
     with:
       monorepo: true
 
+  document:
+    needs: test
+    uses: kurocado-studio/platform/.github/workflows/workflow.document.yml@main
+    secrets:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+    with:
+      instance_id: dcs
+
   release:
     needs: test
     uses: kurocado-studio/platform/.github/workflows/workflow.release.yml@main
